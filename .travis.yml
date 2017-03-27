@@ -17,8 +17,9 @@ addons:
       #   key_url: "http://apt.llvm.org/llvm-snapshot.gpg.key"
       # - sourceline: "deb http://apt.llvm.org/trusty/ llvm-toolchain-trusty-3.8 main"
       #   key_url: "http://apt.llvm.org/llvm-snapshot.gpg.key"
-      - sourceline: "deb http://apt.llvm.org/trusty/ llvm-toolchain-trusty-3.9 main"
-        # key_url: "http://apt.llvm.org/llvm-snapshot.gpg.key"
+      llvm-toolchain-trusty-3.9
+      # - sourceline: "deb http://apt.llvm.org/trusty/ llvm-toolchain-trusty-3.9 main"
+      # key_url: "http://apt.llvm.org/llvm-snapshot.gpg.key"
       # - sourceline: "deb http://apt.llvm.org/trusty/ llvm-toolchain-trusty-4.0 main"
       #   key_url: "http://apt.llvm.org/llvm-snapshot.gpg.key"
       # - sourceline: "deb http://apt.llvm.org/trusty/ llvm-toolchain-trusty-5.0 main"
@@ -40,10 +41,10 @@ env:
     # - LLVM_CONFIG=/usr/bin/llvm-config-3.6
     # - LLVM_CONFIG=/usr/bin/llvm-config-3.7
     # - LLVM_CONFIG=/usr/bin/llvm-config-3.8
-    - LLVM_CONFIG=/usr/bin/llvm-config-3.9
+  - LLVM_CONFIG=/usr/bin/llvm-config-3.9
     # - LLVM_CONFIG=/usr/bin/llvm-config-4.0
     # - LLVM_CONFIG=/usr/bin/llvm-config-5.0
 
 install: "pip install -e ."
 script:
-    - python setup.py test
+  - python setup.py test
